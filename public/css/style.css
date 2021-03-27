@@ -22,7 +22,7 @@ body, .drop-zone, .upload-container{
 }
 body{
     flex-direction: row-reverse;
-    padding: 100px 0;
+    padding-top: 100px;
 }
 
 .upload-container{
@@ -270,17 +270,29 @@ p{
 }
 .contacts{
     position: absolute;
+    background: var(--border-color);
+    border-radius: 50px;
     display: flex;
     top: 20px;
-    right: 40px;
+    right: -30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 50px;
+    box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
+   -webkit-box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
+   -moz-box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
 }
 .contacts img{
     width: 25px;
     height: 25px;
     padding-left: 15px;
     -webkit-tap-highlight-color: transparent;
+    margin-top: 2px;
 }
-
+.responsive-text{
+    display: none;
+}
 
 @media screen and (max-width: 900px){
     :root{
@@ -294,7 +306,9 @@ p{
     .upload-container{
         margin-top: 20px;
     }
-    
+    .title1{
+        -webkit-tap-highlight-color: transparent;
+    }
     .email-container .field{
         flex-direction: column;
         width: 250px;
@@ -303,6 +317,8 @@ p{
         margin-left: 15px;
     }
     .upload-vector{
+        background: url(../img/hero_image.svg) no-repeat center;
+        background-size: contain;
         height: 40vh;
         width: 40vh;
         margin-top: 40px;
@@ -327,18 +343,36 @@ p{
         left: 5%;
     }
     .contacts{
-        flex-direction: column;
-        top: 35px;
-        right: 20px;
+        width: var(--container-width);
+        background: var(--border-color);
+        border-radius: 50px;
+        position: unset;
+        flex-direction:row;
+        margin-top: 80px;
+        align-items: center;
+        box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
+       -webkit-box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
+       -moz-box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
     }
     .contacts a{
-        padding-bottom: 5px;
+        padding-bottom: 2px;
+        padding-top: 4px;
         -webkit-tap-highlight-color: transparent;
+        padding-left: 22px;
     }
     .contacts img{
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
         -webkit-tap-highlight-color: transparent;
+    }
+    .responsive-text{
+        display: block;
+        margin-bottom:0px;
+        margin-top: 10px;
+    }
+    .responsive-text p{
+        color: gray;
+        font-size: small;
     }
 }
 
