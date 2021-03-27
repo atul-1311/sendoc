@@ -1,28 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
 :root {
     --main-bg-color: #FCF4F4;
-    --light-blue: #03a9f4;
-    --dark-blue: #028bca;
+    --border-color: #CC5454;
+    --container-width: 500px;
   }
 
   body {
-    font-family: system-ui;
+    font-family: 'Titillium Web', sans-serif;
     background: var(--main-bg-color);
-    height: 98vh;
-    overflow: hidden;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #333;
   }
 
-  .logo {
+  .logo{
     position: absolute;
     top: 10px;
-    left: 10px;
-    width: 150px;
-  }
+    left: 40px;
+}
+.logo img{
+    height: 100px;
+    width: 200px;
+}
 section.download {
     background: #fff;
+    margin-top: 150px;
     width: 430px;
     max-width: 90%;
     border-radius: 25px;
@@ -42,7 +47,7 @@ section.download {
     font-size: 18px;
     padding: 8px 40px;
     margin-top: 15px;
-    background: var(--light-blue);
+    background: #CC5454;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -50,7 +55,42 @@ section.download {
     cursor: pointer;
     transition: all .3s ease-in-out;
   }
+  .contacts{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 40px;
+}
+.contacts img{
+    width: 25px;
+    height: 25px;
+    padding-left: 15px;
+    -webkit-tap-highlight-color: transparent;
+}
 
-  .send-btn-container a:hover {
-      background: var(--dark-blue);
+@media screen and (max-width: 900px){
+  :root{
+    --container-width: 280px;
+    }
+
+  section.download{
+      width: var(--container-width);
+      margin-top: 200px;
+      margin-bottom: 100px;
+      
+    }
+  .contacts{
+      flex-direction: column;
+      top: 35px;
+      right: 20px;
   }
+  .contacts a{
+      padding-bottom: 5px;
+      -webkit-tap-highlight-color: transparent;
+  }
+  .contacts img{
+      width: 18px;
+      height: 18px;
+      -webkit-tap-highlight-color: transparent;
+  }
+}
