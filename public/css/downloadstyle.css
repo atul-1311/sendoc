@@ -90,7 +90,7 @@ section.download {
   :root{
     --container-width: 280px;
     }
-    
+
     body{
       flex-direction: column;
     }
@@ -101,13 +101,16 @@ section.download {
       margin-bottom: 100px;
       
     }
+    .send-btn-container a{
+      -webkit-tap-highlight-color: transparent;
+    }
     .contacts{
       width: var(--container-width);
       background: var(--border-color);
       border-radius: 50px;
       position: unset;
       flex-direction:row;
-      margin-top: 80px;
+      margin-top: 40px;
       align-items: center;
       box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
      -webkit-box-shadow: 1px 13px 11px -8px rgba(219,135,135,0.88);
