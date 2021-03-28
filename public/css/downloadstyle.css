@@ -90,6 +90,10 @@ section.download {
   :root{
     --container-width: 280px;
     }
+    
+    body{
+      flex-direction: column;
+    }
 
   section.download{
       width: var(--container-width);
