@@ -13,7 +13,7 @@ const toast = document.querySelector(".toast");
 const maxAllowedSize = 50 * 1024 * 1024 //50mb
 
 
-const host = "http://sendoc.herokuapp.com/";
+const host = "https://sendoc.herokuapp.com/";
 const uploadURL = `${host}api/files`;
 const emailURL = `${host}api/files/send`;
 
