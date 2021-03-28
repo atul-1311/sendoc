@@ -1,4 +1,4 @@
-module.exports = ({emailFrom, downloadLink, size, expires}) => {
+module.exports = ({emailFrom, sendername, downloadLink, size, expires}) => {
     return `
         <!doctype html>
             <html>
@@ -148,7 +148,7 @@ module.exports = ({emailFrom, downloadLink, size, expires}) => {
                             <tr>
                             <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
                                 <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">SenDoc inc. dhanbad, Jharkhand.</span>
-                                <br> Contact Us at <a href="mailto:sendoc.easyshare13@gmail.com" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Sendoc Mail</a>
+                                <br> Contact Us at <a href="mailto:sendoc.easyshare13@gmail.com" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">${emailFrom}</a>
                                 <br> Want to share a file? <a href="https://sendoc.herokuapp.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">SenDoc</a>.
                             </td>
                             </tr>
