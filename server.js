@@ -3,11 +3,20 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const path = require('path');
 const mainRouter = require('./routes/index');
+const cors = require('cors');
 
 app.use(express.json());
 
 const connectDB = require('./config/db');
 connectDB();
+
+// Cors
+const corsOptions = {
+    origin: process.env.ALLOWED_CLIENTS.split(',')
+    //['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
+}
+
+app.use(cors(corsOptions));
 
 // Template Engine
 
