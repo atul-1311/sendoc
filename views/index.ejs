@@ -48,9 +48,13 @@
             <p>Or Send Via Email</p>
             <div class="email-container">
                 <form id="emailForm">
+                    <div class="field" id="defaultmail">
+                        <label for="sender">Application Email</label>
+                        <input type="email" required name="from-email" id="sender" value="sendoc.easyshare13@gmail.com" readonly draggable="false">
+                    </div>
                     <div class="field">
-                        <label for="sender">Your Email</label>
-                        <input type="email" required name="from-email" id="sender">
+                        <label for="receiver">sender's Name</label>
+                        <input type="text" required name="sendername" id="sendername">
                     </div>
                     <div class="field">
                         <label for="receiver">Receiver's Email</label>

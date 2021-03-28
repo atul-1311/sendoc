@@ -119,6 +119,7 @@ emailForm.addEventListener("submit", (e)=>{
         uuid: url.split("/").splice(-1, 1)[0],
         emailTo: emailForm.elements["to-email"].value,
         emailFrom: emailForm.elements["from-email"].value,
+        sendername: emailForm.elements["sendername"].value
     };
 
     emailForm[2].setAttribute("disabled", "true");

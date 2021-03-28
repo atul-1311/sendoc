@@ -54,10 +54,10 @@ router.post('/', (req,res)=>{
 });
 
 router.post('/send', async (req,res) => {
-    const { uuid, emailTo, emailFrom } = req.body;
+    const { uuid, emailTo, emailFrom, sendername } = req.body;
 
     //validate request
-    if(!uuid || !emailTo || !emailFrom){
+    if(!uuid || !emailTo || !emailFrom || !sendername){
         return res.status(422).send({error : 'All Fields are required !'});
     }
 
@@ -68,6 +68,7 @@ router.post('/send', async (req,res) => {
     }
 
     file.sender = emailFrom;
+    file.sendername = sendername;
     file.receiver = emailTo;
     const response = await file.save();
 
@@ -77,7 +78,7 @@ router.post('/send', async (req,res) => {
         from: emailFrom,
         to: emailTo,
         subject: 'SenDoc Easy-Share',
-        text: `${emailFrom} has shared a file with you.`,
+        text: `${sendername} has shared a file with you.`,
         html: require('../services/emailTemplate')({
             emailFrom : emailFrom,
             downloadLink: `${process.env.APP_BASE_URL}files/${file.uuid}`,
