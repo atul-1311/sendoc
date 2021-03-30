@@ -103,7 +103,6 @@ const updateProgress = (e)=>{
 }
 
 const showLink = ({ file: url})=> {
-    console.log(url);
     fileInput.value = "";
     emailForm[2].removeAttribute("disabled");
     progressContainer.style.display = "none";
@@ -123,7 +122,6 @@ emailForm.addEventListener("submit", (e)=>{
     };
 
     emailForm[2].setAttribute("disabled", "true");
-    console.table(formData);
     
     fetch(emailURL, {
         method: "POST",
